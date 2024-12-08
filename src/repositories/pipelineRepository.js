@@ -6,7 +6,7 @@ class PipelineRepository {
     }
 
     async getPipelineById(pipelineId) {
-        return await Pipeline.findById(pipelineId).populate('dependencies');
+        return await Pipeline.findById(pipelineId).populate('steps');
     }
 
     async getAllPipelines() {

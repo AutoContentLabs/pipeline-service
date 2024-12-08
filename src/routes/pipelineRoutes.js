@@ -8,4 +8,6 @@ router.get('/pipelines/:id', pipelineController.getPipelineById);
 router.put('/pipelines/:id', pipelineController.updatePipeline);
 router.delete('/pipelines/:id', pipelineController.deletePipeline);
 
+router.post('/pipelines/:id/run', pipelineController.runPipeline);
+
 module.exports = router;

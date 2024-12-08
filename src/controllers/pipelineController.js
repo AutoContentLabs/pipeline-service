@@ -45,6 +45,15 @@ class PipelineController {
             res.status(500).json({ error: error.message });
         }
     }
+
+    async runPipeline(req, res, next) {
+        try {
+            const pipeline = await pipelineService.runPipeline(req.params.id);
+            res.status(200).json(pipeline);
+        } catch (error) {
+            next(error);
+        }
+    };
 }
 
 module.exports = new PipelineController();

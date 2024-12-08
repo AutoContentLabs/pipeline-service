@@ -1,6 +1,6 @@
 // script.js
 
-const apiUrl = 'http://localhost:50000/api/pipelines';  // Write your API URL here
+const apiUrl = 'http://localhost:55100/api/pipelines';  // Write your API URL here
 
 // Create Pipeline
 const createPipelineForm = document.getElementById('createPipelineForm');
@@ -45,8 +45,8 @@ getPipelinesBtn.addEventListener('click', async () => {
     pipelineList.innerHTML = ''; // Clear
 
     pipelines.forEach(pipeline => {
-      const listItem = document.createElement('li');
-      listItem.textContent = `${pipeline.name} - Status: ${pipeline.status}`;
+      const listItem = document.createElement('li');      
+      listItem.textContent = `${pipeline.name} - Status: ${pipeline.status} - Id : ${pipeline._id}`;
       pipelineList.appendChild(listItem);
     });
   } catch (error) {
