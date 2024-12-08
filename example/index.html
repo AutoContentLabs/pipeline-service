@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Fetch Example</title>
+</head>
+<body>
+  <h1>Pipeline Management</h1>
+  
+  <h2>Create Pipeline</h2>
+  <form id="createPipelineForm">
+    <input type="text" id="pipelineName" placeholder="Pipeline Name" required>
+    <input type="text" id="pipelineDescription" placeholder="Pipeline Description" required>
+    <button type="submit">Create Pipeline</button>
+  </form>
+  
+  <h2>Get All Pipelines</h2>
+  <button id="getPipelinesBtn">Get Pipelines</button>
+  <ul id="pipelineList"></ul>
+  
+  <h2>Update Pipeline</h2>
+  <form id="updatePipelineForm">
+    <input type="text" id="updatePipelineId" placeholder="Pipeline ID" required>
+    <input type="text" id="updatePipelineStatus" placeholder="New Status" required>
+    <button type="submit">Update Pipeline</button>
+  </form>
+
+  <h2>Delete Pipeline</h2>
+  <form id="deletePipelineForm">
+    <input type="text" id="deletePipelineId" placeholder="Pipeline ID to delete" required>
+    <button type="submit">Delete Pipeline</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

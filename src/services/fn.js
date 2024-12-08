@@ -25,7 +25,7 @@ async function start() {
     global.startTime = Date.now();
 
     // The event we will listen to.
-    const eventName = events.workflow;
+    const eventName = events.pipeline;
 
     // Listen to incoming data source requests
     await listenMessage(eventName, eventFunction);
